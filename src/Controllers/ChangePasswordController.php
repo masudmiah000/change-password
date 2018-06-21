@@ -19,12 +19,11 @@ class ChangePasswordController extends Controller
     public function change_password(Request $request){
     	$this->validate($request,[
     		'password_current' => 'required|string',
-    		'password' => 'required|string|confirmed',
-    		'password_confirmation' => 'required|string|same:password',
+    		'password' => 'required|string|confirmed'
     	]);
     	try {
     		$user = User::findOrFail(auth()->user()->id);
-    		if (!\Hash::check($request->old_password,$user->password)) {
+    		if (!\Hash::check($request->password_current,$user->password)) {
     			return redirect()->back()->withErrors('Old password did not matched.');
     		}
     		DB::beginTransaction();
