@@ -1,0 +1,19 @@
+{
+    "name": "masud.miah/change-password",
+    "description": "Change password",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masud Miah",
+            "email": "masudmiah000@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mao\\ChangePassword\\": "src/"
+        }
+    }
+}
