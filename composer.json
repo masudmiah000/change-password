@@ -15,5 +15,12 @@
         "psr-4": {
             "Mao\\ChangePassword\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mao\\ChangePassword\\ChangePasswordServiceProvider"
+            ]
+        }
     }
 }
